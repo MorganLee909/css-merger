@@ -1,0 +1,11 @@
+{
+  "name": "cssmerger",
+  "version": "1.0.0",
+  "description": "Simple program to combine and minify css files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lee Morgan",
+  "license": "ISC"
+}

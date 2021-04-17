@@ -1,0 +1,2601 @@
+/* 
+General page styling
+*/
+html{
+    height: 100%;
+    max-width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-width: 100%;
+}
+
+.contentBlock{
+    width: 100%;
+    height: 100vh;
+    flex: 1;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 25px;
+    background: rgb(201, 201, 201);
+}
+
+.mobileMenuSelector{
+    display: none;
+    position: fixed;
+    left: 13px;
+    top: -2px;
+    font-size: 40px;
+}
+
+    .mobileMenuSelector:active{
+        color: rgb(255, 99, 107);
+    }
+
+/* 
+Multi-strand use classes 
+*/
+.strand{
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+    .strandHead{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 50px 0 50px;
+        align-items: center;
+        box-sizing: border-box;
+        height: 10%;
+    }
+
+        .strandTitle{
+            text-align: left;
+            margin: 15px;
+            padding: 0;
+        }
+
+#sidebarCloser{
+    width: 30px;
+    background: rgb(0, 27, 45);
+    color: white;
+    margin-right: auto;
+    border: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+    .buttonBox > *{
+        margin-right: 10px;
+    }
+
+.choosable{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(0, 27, 45);
+    color: rgb(255, 99, 107);
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 99%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+}
+
+    .choosable.offColor{
+        background: rgb(179, 191, 209);
+    }
+
+        .choosable.offColor{
+            background: rgb(201, 201, 201);
+        }
+
+    .choosable.tall{
+        padding: 15px;
+    }
+
+    .choosable:hover{
+        background: rgb(179, 191, 209);
+        color: rgb(255, 99, 107);
+    }
+
+    .choosable.active{
+        background: rgb(240, 252, 255);
+        color: rgb(255, 99, 107);
+    }
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .searchButton{
+        padding: 6px;
+        background: rgb(0, 27, 45);
+        cursor: pointer;
+        color: white;
+    }
+
+        .searchButton:hover{
+            background: rgb(201, 201, 201);
+            color: black;
+        }
+
+        .searchButton:active{
+            background: rgb(179, 191, 209);
+            color: white;
+        }
+
+    .searchInput{
+        border: 4px solid rgb(0, 27, 45);
+        font-size: 20px;
+        padding: 1px 0 1px 4px;
+    }
+
+.dateRange{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .dateRangeInput{
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .dateRangeInput p{
+            margin: 0 5px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+.fileUpload{
+    background: rgb(240, 252, 255);
+    padding: 5px;
+    font-size: 16px;
+}
+
+    .fileUpload::file-selector-button{
+        background: rgb(0, 27, 45);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        margin: auto 0;
+    }
+
+        .fileUpload::file-selector-button:hover{
+            background: rgb(201, 201, 201);
+            color: black;
+        }
+        
+/* 
+Home Strand 
+*/
+#homeStrand{
+    display: flex;
+}
+
+    .card{
+        margin: 0 15px;
+        flex-grow: 1;
+        height: 100%;
+        background: white;
+    }
+
+    .card > *{
+        margin: 10px;
+    }
+
+    .card > p:first-of-type{
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .flexRow{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-basis: 100px;
+        flex-grow: 1;
+        margin: 15px 0;
+        max-height: 43%;
+    }
+
+#revenueCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    #revenue{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #revenueChange{
+        display: flex;
+    }
+
+    #revenueChange > p{
+        font-weight: 100;
+    }
+
+    #revenueChange img{
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+    }
+
+#graphCard{
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+}
+
+#inventoryCheckCard{
+    display: flex;
+    flex-direction: column;;
+    justify-content: space-between;
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+
+    #inventoryCheckCard ul{
+        list-style: none;
+    }
+
+    #inventoryCheckCard button{
+        margin-left: auto;
+    }
+
+    .ingredientCheck{
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+        max-height: 50px;
+    }
+
+        .inventoryCheckIngredient{
+            width: 40%;
+            font-weight: 300;
+            font-size: 15px;
+            margin-right: 25px;
+            text-overflow: ellipsis;
+            white-space: wrap;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .inventoryCheckUnit{
+            width: 20%
+        }
+
+        .numberInput{
+            display: flex;
+            justify-content: center;
+            width: 40%;
+            margin-right: 25px;
+        }
+
+            .numberInput button{
+                width: 30%;
+                font-size: 23px;
+                background: rgb(0, 27, 45);
+                border: none;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .numberInput button:first-of-type{
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+
+            .numberInput button:last-of-type{
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .numberInput input{
+                width: 55%;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .numberInput input::-webkit-outer-spin-button,
+            .numberInput input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            .numberInput input[type=number] {
+                -moz-appearance: textfield;
+            }
+
+    #popularIngredientsCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 100px;
+        flex-grow: 2.5;
+        padding: 5px;
+        box-sizing: border-box;
+
+    }
+        #popularCanvas{
+            margin: 0 35px;
+        }
+
+        .notice{
+            color: red;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+/* 
+Ingredients Strand 
+*/
+#ingredientsStrand{
+    display: none;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+    #categoryList{
+        align-items:center;
+        overflow-y: auto;
+        width: 80%;
+    }
+
+    .categoryDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoryDiv > div:first-of-type{
+        display: flex;
+        cursor: pointer;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .categoryDiv > div:first-of-type p{
+        display: flex;
+        align-items: center;
+        padding: 20px 0 20px 100px;
+        background: rgb(0, 27, 45);
+        flex-grow: 1;
+        color: rgb(255, 99, 107);
+        margin-right: 25px
+    }
+
+    .categoryDiv > div:first-of-type button{
+        padding: 10px;
+        background: rgb(0, 27, 45);
+        border: none;
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+    }
+
+        .ingredientsDiv{
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .ingredientSpacer{
+            border: none;
+            border-top: 1px dashed black;
+            margin: auto;
+        }
+
+/* 
+Recipe Book Strand 
+*/
+#recipeBookStrand{
+    display: none;
+    align-items: center;
+}
+
+    #recipeList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        overflow-y: auto;
+    }
+
+/*
+Analytics Strand
+*/
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 239px;
+    height: 34px;
+    color: rgb(255, 99, 107);
+}
+
+    .switch input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+        .switch input:focus + .slider{
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        .switch input:checked + .slider:before {
+            -webkit-transform: translateX(105px);
+            -ms-transform: translateX(92px);
+            transform: translateX(125px);
+        }
+
+    .slider{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 24px 0 5px;
+        background: rgb(0, 27, 45);
+        transition: 0.2s;
+    }
+
+        .slider:before{
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 110px;
+            left: 1px;
+            bottom: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgb(255, 99, 107);
+            transition: 0.5s;
+        }
+
+.analContent{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+    .itemsList{
+        list-style-type: none;
+        width: 15%;
+        max-height: 95%;
+        overflow-y: auto;
+    }
+
+    .analData{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+
+        #itemUseGraph{
+            padding: 10px;
+            height: 60%;
+            flex-basis: 100px;
+            flex-grow: 5;
+        }
+
+        .dataRow{
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 150px;
+            flex-grow: 0;
+        }
+
+            .analCard{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin: 5px;
+                height: inherit;
+            }
+
+                .analCard > *{
+                    margin: 0;
+                }
+
+#analRecipeContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+/* 
+Orders Strand 
+*/
+#ordersStrand{
+    display: none;
+    align-items: center;
+}
+
+    #orderList{
+        width: 50%;
+        margin-top: 50px;
+        overflow-y: auto;
+    }
+
+/*
+Transactions Strand
+*/
+.transactions{
+    display: none;
+    align-items: center;
+}
+
+    .transactionsList{
+        width: 50%;
+        overflow-y: auto;
+        margin-top: 50px;
+    }
+
+/*
+ACCOUNT STRAND
+*/
+#accountStrand{
+    padding: 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+    .settings{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+        .settingsSection{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 15px 0;
+            background: white;
+            padding: 35px;
+        }
+
+            .settingsSectionHeader{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 25px;
+                border-bottom: 1px solid black;
+            }
+
+                .newLocationButtons{
+                    display: flex;
+                    align-items: center;
+                }
+
+                    .newLocationButtons h1{
+                        padding: 0;
+                        margin-right: 15px;
+                    }
+
+        #accountInformation{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #accountInformationData{
+            width: 50%;
+        }
+
+            #accountInformation label{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+    #accountUpdate{
+        max-width: 500px;
+    }
+
+    #settingsMerchants{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+        #settingsMerchants button{
+            width: 50%;
+        }
+
+    #securityData{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        #securityData button, #securityData a{
+            width: 240px;
+            box-sizing: border-box;
+        }
+
+    #accountShowPassword{
+        max-width: 300px;
+    }
+
+    #changePasswordBox{
+        flex-direction: column;
+        padding: 25px;
+        background: rgb(179, 191, 209);
+    }
+
+        #changePasswordBox label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px;
+        }
+
+        #changePasswordBox p{
+            color: red;
+        }
+
+        #accountButtonBox{
+            margin: 0;
+        }
+
+/*
+Modal
+*/
+.modal{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 27, 45, 0.75);
+}
+
+    .modalBox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+        .modalBox > svg{
+            color: rgb(255, 99, 107);
+            cursor: pointer;
+        }
+
+        .modalSpreadsheetUpload{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0;
+            padding: 25px 100px;
+            background: rgb(240, 252, 255);
+            border: 2px solid black;
+        }
+
+            .modalSpreadsheetUpload > *{
+                margin-top: 15px;
+            }
+
+    #modalFeedback{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 50px;
+    }
+
+        #modalFeedback > *{
+            margin: 15px;
+        }
+
+        #modalFeedback label{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    #modalNewMerchant{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 50px;
+        min-width: 350px;
+    }
+
+        #modalNewMerchant h2{
+            text-align: center;
+        }
+
+        #modalNewMerchant > *{
+            margin: 15px;
+        }
+
+        #modalNewMerchant label{
+            display: flex;
+            flex-direction: column;
+        }
+
+    #modalConfirm{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        background: white;
+        padding: 50px;
+    }
+
+        #modalConfirm svg{
+            font-size: 50px;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        #modalConfirm p{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+    #newMerchantSquareButton{
+        background: white;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        padding: 9px;
+        cursor: pointer;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 44px;
+    }
+
+        #newMerchantSquareButton:hover{
+            background: black;
+            color: white;
+        }
+
+    #modalSquareLocations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 50px;
+        min-width: 350px;
+    }
+
+        #squareLocationsButtons{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+    
+    #modalEditSubIngredients{
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        min-width: 500px;
+    }
+
+        #editSubIngredientsContainer{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+            #editSubAllIng, #editSubCurrentIng{
+                padding: 25px;
+                width: 100%;
+            }
+
+                #editSubAllIng > *{
+                    width: 100%;
+                }
+
+                #editSubCurrentIng > * {
+                    width: 100%;
+                }
+
+    #modalCircularReference{
+        flex-direction: column;
+        background: white;
+        align-items: center;
+        padding: 25px;
+        max-height: 90%;
+        overflow-y: auto;
+    }
+
+    #modalCircularReference div > *{
+        margin: 10px;
+    }
+
+@media screen and (orientation: portrait){
+    @media screen and (max-width: 1400px){
+        body{
+            background:rgb(0, 27, 45);
+        }
+
+        .button{
+            padding: 3px 0;
+        }
+
+        .mobileMenuSelector{
+            color:rgb(240, 252, 255);
+            z-index: 10;
+        }
+
+        .strandTitle{
+            color: white;
+            position: fixed;
+            top: 15px;
+            left: 0;
+            right: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .choosable{
+            background:rgb(201, 201, 201);
+            color: black;
+        }
+
+        /* HOME */
+        #inventoryCheckCard{
+            display: none;
+        }
+
+        #graphCard{
+            display: none;
+        }
+
+        .card{
+            background: white;
+        }
+
+        /* INGREDIENT INVENTORY */
+        #categoryList{
+            width: 95%;
+        }
+
+            .categoryDiv{
+                margin: 5px;
+            }
+
+                .categoryDiv > div:first-of-type p{
+                    padding: 10px;
+                    margin-right: 15px;
+                }
+
+                .categoryDiv > div:first-of-type button{
+                    padding: 10px;
+                    height: initial;
+                    width: initial;
+                    display: flex;
+                }
+
+                .ingredientsDiv{
+                    width: 90%;
+                }
+
+        /* RECIPE BOOK */
+        #recipeList{
+            width: 90%;
+        }
+
+        /* ANALYTICS */
+        #analyticsStrand .strandHead{
+            height: 23vh;
+            flex-direction: column;
+        }
+
+            #analyticsStrand .strandTitle{
+                position: static;
+            }
+
+            .switch{
+                margin-top: 0;
+            }
+
+            .analDateRange{
+                display: none;
+            }
+
+        .analContent{
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+            height: 70vh;
+        }
+
+            .itemsList{
+                width: 90%;
+                height: 47%;
+                margin-bottom: 10px;
+            }
+
+            .analData{
+                height: 47%;
+            }
+
+                .dataRow{
+                    flex-direction: column;
+                }
+
+            #itemUseGraph{
+                display: none;
+            }
+
+            #analDailyAverages{
+                display: none;
+            }
+
+            #recipeSalesGraph{
+                display: none;
+            }
+
+        /* ORDERS */
+        #ordersStrand .strandHead{
+            justify-content: center;
+        }
+
+        #newOrderBtn{
+            display: none;
+        }
+
+        #orderList{
+            width: 90%;
+        }
+
+        #orderList > div p:nth-child(2){
+            display: none;
+        }
+
+        /* TRANSACTIONS */
+        #transactionsStrand .strandHead{
+            justify-content: center;
+        }
+
+        .transactionsList{
+            width: 90%;
+        }
+
+        @media screen and (min-width: 601px){
+            .strandTitle{
+                font-size: 40px;
+            }
+
+            .mobileMenuSelector{
+                left: 40px;
+                top: 20px;
+            }
+
+            /* HOME */
+            #graphCard{
+                display: flex;
+            }
+
+            /* RECIPE BOOK */
+            #recipeList{
+                width: 75%;
+            }
+
+            /* ORDERS */
+            #ordersStrand .strandHead{
+                margin-top: 25px;
+            }
+
+            /* TRANSACTIONS */
+            #transactionsStrand .strandHead{
+                margin-top: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (orientation: landscape){
+    @media screen and (max-width: 1200px){
+        body{
+            background: rgb(0, 27, 45);
+        }
+
+        .contentBlock{
+            padding: 0;
+        }
+
+        .button{
+            padding: 3px 0;
+        }
+
+        .mobileMenuSelector{
+            display: flex;
+            color: rgb(240, 252, 255);
+            z-index: 10;
+        }
+
+        .strandHead{
+            color: white;
+            position: fixed;
+            top: 5px;
+            left: 25px;
+            right: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 20px;
+        }
+
+            .strandTitle{
+                margin: 0;
+            }
+
+        .choosable{
+            background: rgb(201, 201, 201);
+            color: black;
+        }
+
+        /* HOME */
+        #homeStrand{
+            flex-direction: row;
+            padding: 0;
+            align-items: flex-end;
+        }
+
+            #graphCard{
+                display: none;
+            }
+
+            #inventoryCheckCard{
+                display: none;
+            }
+
+            .flexRow{
+                height: 80%;
+            }
+
+                .flexRow:nth-child(3){
+                    flex-grow: 2;
+                }
+
+                .card{
+                    background: white;
+                }
+
+                #popularIngredientsCard{
+                    max-height: 100%;
+                    padding-bottom: 5px;
+                }
+
+        /* INGREDIENTS */
+        #ingredientsStrand{
+            padding-bottom: 10px;
+            justify-content: flex-end;
+        }
+
+        #categoryList{
+            height: 70%;
+        }
+
+            .categoryDiv{
+                margin: 3px;
+            }
+
+                .categoryDiv > div:first-of-type p{
+                    padding: 5px 10px;
+                }
+
+                .categoryDiv > div:first-of-type button{
+                    padding: 0;
+                    height: initial;
+                    width: initial;
+                    display: flex;
+                    align-items: center;
+                }
+            
+            .ingredientsDiv{
+                width: 90%;
+            }
+
+        /* RECIPE BOOK */
+        #recipeBookStrand{
+            padding-bottom: 10px;
+            justify-content: flex-end;
+        }
+
+            #recipeList{
+                height: 70%;
+            }
+
+        /* ANALYTICS */
+        #analyticsStrand{
+            padding-bottom: 10px;
+            justify-content: space-between;
+        }
+
+            #analyticsStrand .strandHead{
+                position: static;
+                height: unset;
+                flex-wrap: wrap;
+            }
+
+                #analyticsStrand .strandTitle{
+                    width: 100%;
+                    margin-top: -13px;
+                    margin-left: 10px;
+                }
+
+                .switch{
+                    margin-top: -15px;
+                    font-size: 15px;
+                }
+
+                #analyticsStrand .dateRange{
+                    margin-top: -55px;
+                }
+
+                .analDateRange{
+                    display: none;
+                }
+
+            .analContent{
+                padding: 0;
+                height: 70%;
+            }
+
+                .itemsList{
+                    width: 23%;
+                }
+
+                .analData{
+                    width: 73%
+                }
+
+                .dataRow{
+                    display: none;
+                }
+
+                .modebar-container{
+                    display: none;
+                }
+
+            #analRecipeContent{
+                height: 70%;
+            }
+
+            #newOrderBtn{
+                display: none;
+            }
+
+        /* ORDERS */
+        #ordersStrand{
+            justify-content: flex-end;
+        }
+
+            #ordersStrand .buttonBox{
+                margin: 0;
+            }
+
+            #orderList{
+                height: 70%;
+            }
+
+        /* TRANSACTIONS */
+        #transactionsStrand{
+            justify-content: flex-end;
+        }
+
+            #transactionsStrand .buttonBox{
+                margin: 0;
+            }
+
+            #transactionsList{
+                height: 70%;
+            }
+
+        @media screen and (min-width: 1000px){
+            .mobileMenuSelector{
+                top: 20px;
+                left: 40px;
+            }
+
+            .strandTitle{
+                margin: 15px;
+            }
+
+            /* HOME */
+            #homeStrand{
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+                #graphCard{
+                    display: flex;
+                }
+
+                .flexRow{
+                    max-height: 40vh;
+                }
+
+                .flexRow:nth-child(2){
+                    flex-grow: 2;
+                }
+
+                .flexRow:nth-child(3){
+                    flex-grow: 1;
+                }
+
+            /* INGREDIENTS */
+            #categoryList{
+                height: 80%;
+            }
+
+            /* RECIPE BOOK */
+            #recipeList{
+                height: 80%;
+            }
+
+            /* ANALYTICS */
+            #analyticsStrand .strandTitle{
+                margin-top: 8px;
+                margin-left: 30px;
+            }
+
+            .analDateRange{
+                display: block;
+            }
+
+            #analRecipeContent, .analContent{
+                height: 80%;
+            }
+
+            /* ORDERS */
+            #orderList{
+                height: 80%;
+            }
+
+            /* TRANSACTIONS */
+            #transactionsList{
+                height: 80%;
+            }
+        }
+    }
+}/* Menu */
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(0, 27, 45);
+    width: 18vw;
+    height: 100vh;
+    transition: width 0.3s;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+
+    .menuHead{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menuLogo{
+        width: 25%;
+        height: 25%;
+    }
+
+    .menuHead a{
+        display: flex;
+        align-items: center;
+        color: rgb(255, 99, 107);
+        text-decoration: none;
+        width: 80%;
+    }
+
+    .menuHead p{
+        margin-left: 25px;
+    }
+
+    .menuHead button{
+        background: none;
+        border-style: none;
+        color: rgb(255, 99, 107);
+        font-size: 35px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .menuHead button:hover{
+        color: rgb(201, 201, 201);
+    }
+
+    .menuHead > button::-moz-focus-inner{
+        border: 0;
+    }
+
+    #menuLocationName{
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .menuButton{
+        display: flex;
+        align-items: center;
+        background: none;
+        border-style: none;
+        color: rgb(255, 99, 107);
+        font-size: 18px;
+        margin: 15px 0;
+        padding-left: 15px;
+        width: 100%;
+        height: 75px;
+        cursor: pointer;
+        text-align: left;
+        border: 0;
+        outline: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+        .menuButton svg{
+            margin-right: 25px;
+        }
+
+        .menuButton::-moz-focus-inner{
+            border: 0;
+        }  
+
+        .menuButton:hover{
+            background: rgb(179, 191, 209);
+        }
+
+    .menu > .active{
+        background: rgb(240, 252, 255);
+        cursor: default;
+    }
+
+    .menu > .active:hover{
+        background: rgb(240, 252, 255);
+    }
+
+/* Minimized menu */
+.menuMinimized{
+    width: 5vw;
+}
+
+.menuLogoMin{
+    width: 4vw;
+}
+
+.menuHeadMin{
+    display: none;
+    flex-direction: column;
+}
+
+.menuMinimized .menuButton{
+    justify-content: center;
+    padding: 0;
+}
+
+.menuMinimized .menuButton svg{
+    margin: 0;
+}
+
+.sidebarButton{
+    display: initial;
+    background: rgb(179, 191, 209);
+    border: none;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: rgb(255, 99, 107);
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    min-width: 100px;
+    margin: 5px;
+    max-height: 52px;
+}
+
+    .sidebarButton:hover{
+        background: rgb(240, 252, 255);
+    }
+
+    .sidebarButton:active{
+        background: rgb(0, 27, 45);
+    }
+
+.sidebar{
+    display: flex;
+    width: 25vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: width 0.2s;
+    overflow: hidden;
+    background: rgb(0, 27, 45);
+    color: rgb(255, 99, 107);
+}
+
+.sidebarWide{
+    width: 40vw;
+}
+
+.sidebarHide{
+    width: 0;
+    transition: width 0.2s;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: -1px 0px 10px gray;
+}
+
+    .sidebarHide > *{
+        width: 0;
+        transition: width 0.2s;
+        visibility: hidden;
+    }
+
+.sidebarIconButtons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.iconButton{
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+    color: rgb(255, 99, 107);
+}
+
+    .iconButton:hover{
+        background: rgb(0, 27, 45);
+        color: white;
+    }
+
+.lineBorder{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin: 25px;
+}
+
+.menuLinks{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+    .menuLinks > *{
+        background: none;
+        border: none;
+        color: white;
+        text-decoration: underline;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+.verticalBorder{
+    border-left: 2px solid black;
+    height: 100%;
+}
+
+/* 
+Ingredient Details 
+*/
+#ingredientDetails{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #ingredientDetails label{
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+    }
+
+    #ingredientDetails label p{
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    #subIngredientList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        overflow: auto;
+        max-height: 150px;
+        width: 75%;
+    }
+
+/*
+EDIT INGREDIENT
+*/
+#editIngredient{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #editIngredient label{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unitbuttons{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .unitButton{
+            margin: 5px;
+            padding: 5px;
+            background: rgb(179, 191, 209);
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            color: rgb(255, 99, 107);
+        }
+
+            .unitButton:hover{
+                background: rgb(240, 252, 255);
+            }
+
+            .unitActive{
+                /* background: rgb(255, 99, 107); */
+                background: rgb(0, 27, 45);
+            }
+
+                .unitActive:hover{
+                    background: rgb(0, 27, 45);
+                    cursor: default;
+                }
+
+/* 
+Recipe Details 
+*/
+#recipeDetails{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #recipeIngredientList{
+        width: 100%;
+    }
+
+    #recipePrice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        #recipePrice p{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+/*
+Add Recipe
+*/
+#addRecipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+    .recipeBasicInfo{
+        width: 75%;
+        background: rgb(240, 252, 255);
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+        .recipeBasicInfo label{
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+
+        .recipeBasicInfo input{
+            width: 50%;
+        }
+
+    #addRecipe h2{
+        margin-top: 10px;
+    }
+
+    #recipeInputIngredients{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 0 0 25px 0;
+        width:100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: 0 0 2px gray;
+        border-radius: 5px;
+    }
+
+        #recipeInputIngredients div{
+            width: 75%;
+            background: rgb(240, 252, 255);
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+            #recipeInputIngredients div > label{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2px;
+            }
+
+            #recipeInputIngredients input{
+                width: 100px;
+            }
+
+            #recipeInputIngredients div h4{
+                color: rgb(255, 99, 107);
+            }
+
+/*
+EDIT RECIPE
+*/
+#editRecipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #editRecipeIngList{
+        width: 100%;
+        max-height: 75%;
+        overflow-y: auto;
+    }
+
+        .editRecipeIng{
+            background: rgb(0, 27, 45);
+            color: white;
+            width: 90%;
+            border-radius: 5px;
+            text-align: center;
+            padding: 5px;
+            margin: 5px auto;
+            position: relative;
+        }
+
+            .editRecipeIng button{
+                position: absolute;
+                right: 5px;
+            }
+
+/* New Order */
+#newOrderIngredientList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+    .newOrderLabels{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+        .newOrderLabels label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            margin: 10px 0;
+        }
+
+        .newOrderLabels input{
+            width: 50%;
+        }
+
+    #newOrderIngredients{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        overflow-y: auto;
+    }
+
+        #newOrderIngredients .choosable{
+            background: rgb(240, 252, 255);
+            justify-content: left;
+        }
+
+            #newOrderIngredients .choosable:hover{
+                background: rgb(179, 191, 209);
+            }
+#newOrder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border-left: 1px solid black;
+    padding-left: 25px;
+}
+
+    #newOrder > label{
+        margin: 5px;
+    }
+
+    #selectedIngredientList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 75%;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+
+        .selectedIngredient{
+            display: flex;
+            flex-direction: column;
+            background: rgb(0, 27, 45);
+            color: white;
+            margin: 5px 0;
+            width: 95%;
+        }
+
+            .selectedIngredient > div{
+                margin: 3px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center
+            }
+
+                .selectedIngredient p{
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+
+                .newOrderRemove{
+                    background: rgb(0, 27, 45);
+                    border: 1px solid white;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: bold;
+                    padding: 5px;
+                    cursor: pointer;
+                }
+
+                    .newOrderRemove:hover{
+                        background: rgb(201, 201, 201);
+                        color: black;
+                    }
+
+                .selectedIngredient input{
+                    width: 45%;
+                }
+
+/* New Ingredient */
+#newIngredient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #newIngredient label{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: white;
+        padding: 10px;
+        margin: 2px
+    }
+
+    #newIngredient .button{
+        margin: 15px auto;
+    }
+
+    #newIngredient h2{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+/* Order Details */
+#orderDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    .orderDiv{
+        width: 50%;
+    }
+
+        .subOrderDiv{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    #orderIngredients{
+        width: 90%;
+        overflow: auto;
+    }
+
+    #orderTotalPrice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+/*
+ORDER FILTER
+*/
+#orderFilter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    .orderFilterDates{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #orderFilterIngredients{
+        width: 100%;
+        max-height: 50%;
+        overflow-y: auto;
+    }
+
+        #orderFilterIngredients .choosable{
+            background: rgb(240, 252, 255);
+            justify-content: left;
+        }
+
+            #orderFilterIngredients .choosable:hover{
+                background: rgb(179, 191, 209);
+            }
+
+            #orderFilterIngredients .active{
+                background: rgb(179, 191, 209);
+            }
+
+/*
+ORDER CALCULATOR
+*/
+#orderCalculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #orderCalculator > *{
+        margin: 15px 0;
+    }
+
+/*
+TRANSACTION DETAILS
+*/
+.transactionDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    .transactionRecipes{
+        width: 100%;
+    }
+
+    .totals{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+/*
+TRANSACTION FILTER
+*/
+.transactionFilter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    #transFilterRecipeList{
+        width: 100%;
+        max-height: 50%;
+        overflow-y: auto;
+    }
+
+        #transFilterRecipeList .choosable{
+            background:rgb(240, 252, 255);
+            justify-content: left;
+        }
+
+        #transFilterRecipeList .choosable:hover{
+            background: rgb(179, 191, 209);
+        }
+
+        #transFilterRecipeList .active{
+            background:rgb(179, 191, 209);
+        }
+/*
+NEW TRANSACTION
+*/
+.newTransaction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+    .newTransaction > h2{
+        text-align: center;
+    }
+
+    .newTransactionRecipes{
+        width: 100%;
+        height: 90%;
+        overflow-y: auto;
+    }
+
+    .newTransactionRecipe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        margin: 10px 0;
+        padding: 5px 0;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+@media screen and (orientation: portrait){
+    @media screen and (max-width: 1400px){
+        .sidebar{
+            width: 100vw;
+            color: white;
+        }
+
+        .sidebarIconButtons{
+            display: none;
+        }
+
+        /* MENU */
+        #menu{
+            display: none;
+            width: 100vw;
+            padding: 0;
+        }
+    
+            .menuShifter{
+                display: none;
+            }
+
+            .menuHead{
+                justify-content: right;
+                padding: 0;
+                margin-bottom: 25px;
+            }
+
+                .menuHead a{
+                    justify-content: center;
+                    margin: auto;
+                }
+
+
+            .menuButton{
+                padding-left: 0;
+                justify-content: center;
+                background: rgb(201, 201, 201);
+                color: black;
+                width: 90%;
+                margin: 15px auto;
+                box-shadow: 0 0 5px white;
+            }
+
+        /* ORDER CALCULATOR */
+        #orderCalcBtn{
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 601px){
+        .menuHead a p{
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (orientation: landscape){
+    @media screen and (max-width: 1200px){
+        .sidebar{
+            width: 100vw;
+            color: white;
+            padding: 3px 15px;
+        }
+
+        .sidebarIconButtons{
+            display: none;
+        }
+
+        /* MENU */
+        #menu{
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+            .menuShifter{
+                display: none;
+            }
+
+            .menuHead{
+                justify-content: center;
+                padding: 0;
+                margin-bottom: 0;
+                height: 50px;
+            }
+
+                .menuHead a{
+                    width: initial;
+                    justify-content: center;
+                }
+
+                    .menuLogo{
+                        max-height: 50px;
+                        max-width: 50px;
+                    }
+
+                .menuButton{
+                    width: 40%;
+                    justify-content: center;
+                    background: rgb(201, 201, 201);
+                    color: black;
+                    margin: 15px;
+                    padding-left: 0;
+                    box-shadow: 0 0 5px white;
+                    height: 10vh;
+                }
+            
+            /* ORDER CALCULATOR */
+            #orderCalcBtn{
+                display: none;
+            }
+
+            /* INGREDIENT DETAILS */
+            #ingredientDetails > *{
+                margin: 0;
+            }
+
+            #recipeListLabel, #subIngredientList{
+                display: none;
+            }
+
+            /* FILTER ORDERS */
+            #orderFilter > *{
+                margin: 0;
+            }
+
+            #orderFilter h1{
+                padding: 0;
+            }
+
+            #filterOrderDateRange, #orderFilter .lineBorder{
+                display: none;
+            }
+
+            .dateRange{
+                padding-bottom: 3px;
+            }
+
+            #orderFilterSubmit{
+                margin-top: 3px;
+            }
+
+            /* ORDER DETAILS */
+            #orderIngredients{
+                display: none;
+            }
+
+            /* TRANSACTION DETAILS */
+            #transactionRecipesLabel, .transactionRecipes, #transactionDetails .lineBorder{
+                display: none;
+            }
+
+            /* FILTER TRANSACTIONS */
+            #transactionFilter > *{
+                margin: 0;
+            }
+
+            #transactionFilterDateLabel{
+                display: none;
+            }
+
+            #transactionFilter .dateRange{
+                margin-bottom: 5px;
+            }
+
+            #transFilterSubmit{
+                margin-top: 5px;
+            }
+
+        @media screen and (min-width: 1000px){
+            .menuLogo{
+                max-height: initial;
+                max-width: 300px;
+            }
+
+            .menuHead a p{
+                font-size: 35px;
+            }
+
+            #recipeListLabel, #subIngredientList{
+                display: flex;
+            }
+
+            /* ORDER FILTER */
+            #orderFilterIngredients{
+                max-height: 70%;
+            }
+
+            #orderFilterSubmit{
+                margin-top: 15px;
+            }
+
+            /* ORDER DETAILS */
+            #orderIngredients{
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* TRANSACTION DETAILS */
+            #transactionRecipesLabel, .transactionRecipes, #transactionDetails .lineBorder{
+                display: flex;
+                flex-direction: column;
+            }
+
+            /* TRANSACTION FILTER */
+            #transFilterRecipeList{
+                max-height: 70%;
+            }
+        }
+    }
+}/* Initialization for all pages */
+*{margin:0;padding:0;font-family:'Saira',sans-serif;}
+
+body{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 27, 45);
+    min-height: 100vh;
+}
+
+/*
+Header
+*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: #001b2d;
+    width: 100%;
+    height: 75px;
+}
+
+    .headerStart{
+        display: flex;
+        align-items:center;
+        text-decoration: none;
+        margin-left: 25px;
+        width: 275px;
+    }
+
+        .headerStart img{
+            max-height: 75%;
+        }
+
+        .headerLogo{
+            color: white;
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .mobileHomeButton{
+            display: none;
+        }
+
+    .headerEnd{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 25px;
+        
+    }
+
+        .headerEnd > *{
+            margin-left: 20px;
+        }
+
+        .headerEnd a{
+            color: rgb(255, 99, 107);
+        }
+
+/* Loader */
+#loaderContainer{
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 27, 45, 0.5);
+    z-index: 2;
+    position: fixed;
+}
+
+.loader{
+    margin-bottom: 200px;
+    margin-right: 100px;
+}
+
+.loader .outer{
+    border: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid rgba(255, 99, 107, 0.8);
+    border-bottom: 10px solid rgba(255, 99, 107, 0.8);
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    animation: spin1 2s infinite;
+    position: absolute;
+}
+
+.loader .mid{
+    border: 10px solid rgba(255, 255, 255, 0);
+    border-right: 10px solid rgba(0, 27, 45, 0.8);
+    border-left: 10px solid rgba(0, 27, 45, 0.8);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin: 10px 0 0 10px;
+    animation: spin2 2s infinite;
+    position: absolute;
+}
+
+.loader .inner{
+    border: 10px solid rgba(255, 255, 255, 0);
+    border-top: 10px solid rgba(179, 191, 209, 0.8);
+    border-bottom: 10px solid rgba(179, 191, 209, 0.8);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 20px 0 0 20px;
+    animation: spin3 2s infinite;
+    position: absolute;
+}
+
+.loader img{
+    margin: 10px 0 0 10px;
+    height: 70px;
+    width: 80px;
+    position: absolute;
+    z-index: -1;
+    animation: imgSpin 3s linear infinite;
+}
+
+@keyframes spin1{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin2{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(720deg); }
+}
+
+@keyframes spin3{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1080deg); }
+}
+
+@keyframes imgSpin{
+    0% { 
+        transform: rotateY(0deg);
+    }
+
+    100% { 
+        transform: rotateY(360deg);
+    }
+}
+
+/* General style that should apply to all pages */
+h1 {
+    text-align: center;
+    padding-bottom: 13px;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+button{
+    outline: 0;
+}
+
+button::-moz-focus-inner{
+    border: 0;
+}
+
+.link{
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 20px;
+}
+
+    .link:hover {
+        color: #ff636b;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.button{
+    background: rgb(0, 27, 45);
+    border: none;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: rgb(255, 99, 107);
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    min-width: 100px;
+    margin: 5px;
+    max-height: 52px;
+}
+
+    .button:hover{
+        background: rgb(179, 191, 209);
+    }
+
+    .button:active{
+        background: rgb(240, 252, 255);
+    }
+
+.dangerButton{
+    display: initial;
+    background: rgb(255, 99, 107);
+    border: none;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    font-size: 15px;
+    min-width: 100px;
+    margin: 5px;
+    max-height: 52px;
+}
+
+    .dangerButton:hover{
+        background: rgb(255, 129, 137);
+    }
+
+    .dangerButton:active{
+        background: rgb(240, 252, 255);
+    }
+
+.linkButton{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.public-buttons {
+    position: inherit;
+    align-self: center;
+    margin-right: 39px;
+}
+
+.buttonDisabled{
+    background: gray;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 5px;
+    color: rgb(0, 27, 45);
+    cursor: default;
+    font-size: 25px;
+    text-align: center;
+}
+
+.line-break{
+    border: 1px solid rgb(255, 99, 107);
+    margin: 30px 0;
+}
+
+
+.strand, .action{
+    display: none;
+}
+
+.strand{
+    transition: width 1s linear;
+}
+
+/*
+Banner
+*/
+#bannerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 15px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+    .banner{
+        display: flex;
+        width: 75%;
+        height: 65px;
+        margin: 10px auto;
+        box-shadow: 0 0 10px black;
+        border: 2px solid black;
+        background: white;
+    }
+
+        .banner > div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+            color: white;
+        }
+
+        .banner > p{
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 75%;
+            padding-left: 10px;
+        }
+
+        .banner > button{
+            background: none;
+            border: none;
+            height: 20px;
+            position: relative;
+            top: -10px;
+            right: -10px;
+            cursor: pointer;
+            color: white;
+            pointer-events: all;
+        }
+
+@media screen and (max-width: 1400px){
+    .button{
+        font-size: 15px;
+    }
+
+    .header{
+        height: 30px;
+    }
+
+        .headerStart{
+            margin-left: 10px;
+        }
+
+        .headerEnd{
+            font-size: 8px;
+        }
+
+        .headerLogo{
+            white-space: nowrap;
+            font-size: 10px;
+        }
+
+    .truncateLong{
+        max-width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .mobileHide{
+        display: none !important;
+    }
+
+    .headerStart{
+        width: 0;
+    }
+}
