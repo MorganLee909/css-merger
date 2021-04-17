@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-let merge = (files, output)=>{
+module.exports = (files, output)=>{
     let css = "";
     for(let i = 0; i < files.length; i++){
         css += fs.readFileSync(files[i]);
