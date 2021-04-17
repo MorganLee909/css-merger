@@ -6,7 +6,7 @@ module.exports = (files, output)=>{
         css += fs.readFileSync(files[i]);
     }
 
-    css = css.replace(/\s+/g, "");
+    // css = css.replace(/\s+/g, "");
 
     fs.writeFileSync(output, css);
 }
