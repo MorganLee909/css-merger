@@ -1,7 +1,7 @@
 # CSSmerger
 
 ## Introduction
-CSSmerger is a tool for bundling all of your css files into a single file in order to easily modularize your CSS while still only linking a single file in your HTML
+CSSmerger is a tool for bundling all of your css files into a single file in order to easily modularize your CSS while still only linking a single file in your HTML.
 
 ## Installation
 ```sh
@@ -28,7 +28,7 @@ let options = {
 cssmerger([
     "./path/to/file.css",
     "./path/to/entire/directory"
-], "./path/to/output.css")
+], "./path/to/output.css", options);
 ```
 
 ## Options
