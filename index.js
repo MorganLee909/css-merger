@@ -17,12 +17,12 @@ let readDirectoryFiles = (dir)=>{
     return css;
 }
 
-let merge = (files, output)=>{
+let merge = (files, output, options)=>{
     let css = "";
     for(let i = 0; i < files.length; i++){
         if(files[i].substring(files[i].length - 4, files[i].length) === ".css"){
             css += fs.readFileSync(files[i]);
-        }else if(fs.lstatSync(files[i]).isDirectory() === true){
+        }else if(options.recursive === true && fs.lstatSync(files[i]).isDirectory() === true){
             if(files[i][files[i].length-1] !== "/") files[i] += "/";
             css += readDirectoryFiles(files[i]);
         }
