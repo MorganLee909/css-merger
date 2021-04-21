@@ -22,7 +22,8 @@ Run the CSSmerger function early in your code, in your 'index.js' file or other 
 const cssmerger = require("cssmerger");
 
 let options = {
-    recursive: true
+    recursive: true,
+    minimize: false
 };
 
 let files = [
@@ -37,7 +38,8 @@ cssmerger(files, "./path/to/output.css", options);
 
 | Option | Properties | Description |
 | ------ | ---------- | ----------- |
-| recursive | optional default=true | When true, will recursively search all sub-directories for all CSS files. When false, will use only the CSS files that are a direct child of any directories |
+| recursive | default=true | When true, will recursively search all sub-directories for all CSS files. When false, will use only the CSS files that are a direct child of any directories |
+| minimize | defaut=false | When true will shrink the file size as much as possible. False will leave the file easier to read and work with.
 
 ## Notes
 

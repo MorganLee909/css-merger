@@ -17,18 +17,37 @@ let readDirectoryFiles = (dir)=>{
     return css;
 }
 
-let merge = (files, output, options)=>{
+let minimize = (css)=>{
+    css = css.replace(/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, "");
+    let lines = css.split("\n");
+
+    for(let i = 0; i < lines.length; i++){
+        lines[i] = lines[i].trim();
+    }
+
+    css = lines.join("");
+
+    return css;
+}
+
+let merge = (files, output, options = {})=>{
+    opts = {
+        recursive: (options.recursive === false) ? false : true,
+        minimize: (options.minimize === true) ? true : false
+    };
+
+
     let css = "";
     for(let i = 0; i < files.length; i++){
         if(files[i].substring(files[i].length - 4, files[i].length) === ".css"){
             css += fs.readFileSync(files[i]);
-        }else if(options.recursive === true && fs.lstatSync(files[i]).isDirectory() === true){
+        }else if(opts.recursive === true && fs.lstatSync(files[i]).isDirectory() === true){
             if(files[i][files[i].length-1] !== "/") files[i] += "/";
             css += readDirectoryFiles(files[i]);
         }
     }
-
-    // css = css.replace(/\s+/g, "");
+    
+    if(options.minimize === true) css = minimize(css);
 
     fs.writeFileSync(output, css);
 }

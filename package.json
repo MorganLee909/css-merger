@@ -1,6 +1,6 @@
 {
   "name": "cssmerger",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Simple program to combine and minify css files",
   "main": "index.js",
   "scripts": {
