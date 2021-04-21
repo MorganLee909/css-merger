@@ -25,10 +25,12 @@ let options = {
     recursive: true
 };
 
-cssmerger([
+let files = [
     "./path/to/file.css",
     "./path/to/entire/directory"
-], "./path/to/output.css", options);
+];
+
+cssmerger(files, "./path/to/output.css", options);
 ```
 
 ## Options
